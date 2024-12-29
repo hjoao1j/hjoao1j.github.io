@@ -1,0 +1,168 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffefd5, #ffe4b5);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #6184f8;
+    color: #fff;
+    animation: fadeInDown 1s ease-in-out;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    background: #1b4f94;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+    color: #ffefd5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Seção do vídeo */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #29588d;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.video-section video {
+    max-width: 80%;
+    height: auto;
+    border: 4px solid #ffefd5;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.video-section video:hover {
+    transform: scale(1.05);
+}
+
+/* Seção de conteúdo */
+.content-section {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content-section .box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.content-section .box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.content-section .box p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a46d8;
+    color: #ffefd5;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    margin-top: auto;
+}
+
+footer p:hover {
+    color: #fff;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .video-section video {
+        max-width: 95%;
+    }
+
+    .content-section .box {
+        margin: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header nav a {
+        font-size: 1em;
+    }
+
+    .content-section .box p {
+        font-size: 1em;
+    }
+}
